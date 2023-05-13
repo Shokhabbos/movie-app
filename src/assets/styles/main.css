@@ -1,0 +1,68 @@
+body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, Helvetica, sans-serif;
+  color: #fff;
+  background-color: #16151a;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+  margin: 0;
+  padding: 0;
+}
+
+ul {
+  list-style: none;
+}
+a {
+  text-decoration: none;
+}
+
+.container {
+  width: 100%;
+  max-width: 1140px;
+  margin: 0 auto;
+  padding: 0 16px;
+}
+
+.cards {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 25px;
+
+}
+.card{
+  color: white;
+  position: relative;
+  width: 100%;
+  box-sizing: border-box;
+  
+
+}
+.card img {
+  width: 100%;
+  max-width: 250px;
+}
+.card h2{
+  font-size: 18px;
+  font-weight: 600;
+}
+.card .relase-date{
+  font-size: 16px;
+  font-weight: 700;
+  display: block;
+}
+.card .rating{
+  position: absolute;
+  top: 0;
+  right:0;
+  background-color: #727174;
+  padding: 12px 15px;
+}
