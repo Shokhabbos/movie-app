@@ -6,6 +6,7 @@ import MovieCard from "../components/MovieCard/MovieCard";
 
 const SearchList = () => {
   const { searchQuery } = useParams();
+//   console.log(match.params.searchQuery);
 
   const [SearchInfo, setSearchInfo] = useState({
     isFetched: false,
