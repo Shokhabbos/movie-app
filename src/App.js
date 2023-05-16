@@ -1,5 +1,5 @@
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
-import { Home, Movie, SingleMovie, SingleTv, Tv } from "./pages";
+import { Home, Movie, SearchList, SingleMovie, SingleTv, Tv } from "./pages";
 import Header from "./containers/Header";
 
 function App() {
@@ -14,6 +14,7 @@ function App() {
             <Route path="/tv" element={<Tv />} />
             <Route path="/movie/:id" element={<SingleMovie />} />
             <Route path="/tv/:id" element={<SingleTv />} />
+            <Route path="/search/:searchQuery" element={<SearchList />} />
           </Routes>
         </div>
       </Router>
