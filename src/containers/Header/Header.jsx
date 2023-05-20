@@ -1,26 +1,27 @@
 import { useState, useEffect } from "react";
-import { Link, useNavigate } from "react-router-dom";
-
+import { Link, useNavigate, useParams } from "react-router-dom";
 
 import "./Header.scss";
 
 const Header = () => {
   const [searchValue, setSearchValue] = useState("");
   const navigate = useNavigate();
-  useEffect(() =>{
-    if(searchValue.length > 0){
-      navigate(`/search/${searchValue}`)
-    } else{
-      navigate(`/`)
+  const { id } = useParams();
+  console.log("id",id);
+  useEffect(() => {
+    if (searchValue.length > 0) {
+      navigate(`/search/${searchValue}`);
+    } else {
+      navigate(`/`);
     }
-  },[searchValue])
+  }, [searchValue]);
   const handleSearchChange = (e) => {
     setSearchValue(e.target.value);
   };
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    navigate(`/search/${searchValue}`)
+    navigate(`/search/${searchValue}`);
   };
 
   return (
@@ -40,7 +41,7 @@ const Header = () => {
                 </Link>
               </li>
               <li>
-                <Link className="header__link" to="/movie">
+                <Link className="header__link" to={`/movie/${id}`}>
                   Movie
                 </Link>
               </li>

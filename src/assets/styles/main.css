@@ -66,3 +66,10 @@ a {
   background-color: #727174;
   padding: 12px 15px;
 }
+html{
+  scroll-behavior: smooth;
+}
+
+h1{
+  color: white;
+}

@@ -2,7 +2,7 @@ import { Link } from "react-router-dom";
 
 const MovieCard = ({ id, title, imgLink, rating, relaseDate }) => {
   return (
-    <Link to={`/movie/${id}`} className="card">
+    <Link to={`/single-movie/${id}`} className="card">
       <div className="card__img">
         <img src={imgLink} alt="Card Img" />
       </div>
